@@ -12,7 +12,7 @@ def load_ai_model(model_path="model/image_classifier_model.h5"):
         return None
 
 def predict_image(model, image):
-    image = image.resize((224, 224)) 
+    image = image.resize((150, 150)) 
     image = tf.keras.preprocessing.image.img_to_array(image)
     image = image / 255.0
     image = np.expand_dims(image, axis=0)
